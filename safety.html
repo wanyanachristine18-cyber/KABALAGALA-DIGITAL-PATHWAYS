@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Safety – Kabalagala Digital Pathways</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-light.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kdp_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true">
+        <span>Kabalagala Digital Pathways</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="careers.html">ICT Careers</a></li>
+        <li><a href="safety.html" class="active">Online Safety</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+      🌙
+    </button>
+  </header>
+
+  <main>
+    <h1>Online Safety</h1>
+    <p>Use these simple checks to stay safer while searching for training and applying online.</p>
+
+    <h2>1. How to Check a Website</h2>
+    <div class="card">
+      <ul>
+        <li>Look at the address carefully. Prefer sites ending in <strong>.go.ug</strong>, <strong>.ac.ug</strong>, or well-known organisations.</li>
+        <li>Check for the padlock icon (HTTPS) in the browser.</li>
+        <li>Be careful with sites that ask for money before giving clear information.</li>
+        <li>Search the organisation name + “scam” or “review” before sending money or personal documents.</li>
+      </ul>
+    </div>
+
+    <h2>2. Passwords and Two-Step Login</h2>
+    <div class="card">
+      <h3>Strong password habits</h3>
+      <ul>
+        <li>Use at least 8–12 characters</li>
+        <li>Mix letters, numbers and symbols</li>
+        <li>Do not reuse the same password on many sites</li>
+        <li>Never share your password with anyone</li>
+      </ul>
+      <h3>Two-step verification (2FA)</h3>
+      <p>When available, turn on two-step login. The site will send a code to your phone or email when you sign in from a new device. This makes it much harder for someone else to use your account.</p>
+    </div>
+
+    <h2>3. Scam Warning Signs</h2>
+    <div class="warning">
+      <h3>Common red flags</h3>
+      <ul>
+        <li>Someone asks you to pay a fee before you receive training or a job</li>
+        <li>Messages that create extreme urgency (“Apply in the next 1 hour or lose the chance”)</li>
+        <li>Requests for your password, PIN or full bank details</li>
+        <li>Offers that sound too good to be true (very high salary for no experience)</li>
+        <li>Poor spelling and grammar in official-looking messages</li>
+      </ul>
+    </div>
+
+    <h2>4. How to Report or Verify a Claim</h2>
+    <div class="card">
+      <ul>
+        <li>If you are unsure about a training provider, contact the organisation using a phone number or email from their official website (not from the message you received).</li>
+        <li>For possible scams in Uganda you can also report to the Uganda Communications Commission (UCC) or the police cybercrime unit.</li>
+        <li>Talk to a trusted teacher, mentor or family member before sending money.</li>
+      </ul>
+      <p>When in doubt, stop and verify. It is better to miss one opportunity than to lose money to a scam.</p>
+    </div>
+
+    <p style="margin-top: 30px;">
+      <a href="about.html" class="btn">Next: About this Project →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="about.html#sources">Sources</a> |
+      <a href="about.html#privacy">Privacy</a>
+    </p>
+    <p>Kabalagala Digital Pathways &middot; Developed by <strong>Wanyana Christin</strong> &middot; Victoria University Kampala</p>
+  </footer>
+
+  <script>
+    (function () {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+      function setTheme(theme) {
+        const isDark = (theme === 'dark');
+        htmlEl.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        if (themeToggleBtn) themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+        const logoSrc = isDark ? 'images/logo-dark.svg' : 'images/logo-light.svg';
+        document.querySelectorAll('img.logo-icon, [data-theme-logo="true"]').forEach(function (img) {
+          img.src = logoSrc;
+        });
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) favicon.href = logoSrc;
+        try { localStorage.setItem('kdp_theme', theme); } catch (e) {}
+      }
+      const savedTheme = localStorage.getItem('kdp_theme') || 'light';
+      setTheme(savedTheme);
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+          const current = htmlEl.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

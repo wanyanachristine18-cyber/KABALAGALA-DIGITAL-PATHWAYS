@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn – Kabalagala Digital Pathways</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-light.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kdp_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true">
+        <span>Kabalagala Digital Pathways</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html" class="active">Learn</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="careers.html">ICT Careers</a></li>
+        <li><a href="safety.html">Online Safety</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+      🌙
+    </button>
+  </header>
+
+  <main>
+    <h1>Learn Basic Digital Skills</h1>
+    <p>These short lessons help beginners start using a computer, the internet, documents and a little HTML. Tick each task as you complete it — your progress is automatically saved!</p>
+
+    <!-- Interactive Progress Tracker -->
+    <div class="progress-container card" id="progress-tracker">
+      <div class="progress-header">
+        <h3>Your Learning Progress: <span id="progress-percent">0%</span></h3>
+        <span id="progress-count" style="font-weight: 600; color: var(--accent);">0 of 14 tasks completed</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar" style="width: 0%;"></div>
+      </div>
+      <button type="button" id="reset-progress" class="btn-secondary">Reset Progress</button>
+    </div>
+
+    <h2>1. Computer and File Basics</h2>
+    <div class="card">
+      <img src="images/computer-basics.jpg" alt="Student practicing computer basics and typing" class="card-img">
+      <h3>Core Skills Checklist</h3>
+      <ul class="checklist">
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="comp-1">
+            <span>Learn how to turn a computer on and off safely via the Start menu</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="comp-2">
+            <span>Practise using the mouse (left click, double click, right click, scrolling)</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="comp-3">
+            <span>Create a new folder on the Desktop named <strong>My Learning</strong></span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="comp-4">
+            <span>Open Notepad (or TextEdit), type your name and today's date, and save it as <code>practice1.txt</code> inside <strong>My Learning</strong></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <h2>2. Internet Search and Email</h2>
+    <div class="card">
+      <h3>Internet &amp; Email Tasks</h3>
+      <ul class="checklist">
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="net-1">
+            <span>Open a web browser (Chrome, Firefox, or Edge) and search for "free ICT training Kabalagala"</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="net-2">
+            <span>Inspect the website address (URL) to check for official domains like <code>.go.ug</code> or <code>.ac.ug</code></span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="net-3">
+            <span>Create a secure personal email account (e.g. Gmail) with a strong password (8+ characters)</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="net-4">
+            <span>Search for "Kabalagala Youth One Stop Centre" and save their verified contact information in your notes</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <h2>3. Document-Making Practice</h2>
+    <div class="card">
+      <h3>Word Processing Tasks</h3>
+      <ul class="checklist">
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="doc-1">
+            <span>Open a word processor (Microsoft Word, Google Docs, or LibreOffice Writer)</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="doc-2">
+            <span>Type a 4-to-5 sentence paragraph describing why you want to learn digital skills</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="doc-3">
+            <span>Format the text: increase heading font size to 18pt, make key phrases bold, and set line spacing</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="doc-4">
+            <span>Save the document as <code>my-goal.docx</code> (or PDF) inside your <strong>My Learning</strong> folder</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <h2>4. First HTML Challenge</h2>
+    <div class="card">
+      <h3>What is HTML?</h3>
+      <p>HTML is the language used to create web pages. It uses tags to structure text, links, and images.</p>
+      
+      <h3>Code Template</h3>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, my name is ...&lt;/h1&gt;
+  &lt;p&gt;I am learning digital skills in Kabalagala.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+      <h3>HTML Challenge Checklist</h3>
+      <ul class="checklist">
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="html-1">
+            <span>Open Notepad, copy the template above, and replace the heading with your actual name</span>
+          </label>
+        </li>
+        <li>
+          <label class="checklist-item">
+            <input type="checkbox" class="task-checkbox" data-task-id="html-2">
+            <span>Save the file as <code>my-first-page.html</code> and double-click to view it live in your browser</span>
+          </label>
+        </li>
+      </ul>
+      <p><strong>Congratulations!</strong> Once all boxes are checked, you have completed the beginner digital foundation!</p>
+    </div>
+
+    <p style="margin-top: 30px;">
+      <a href="opportunities.html" class="btn">Next: Find Training Opportunities →</a>
+    </p>
+
+    <!-- Client-Side Persistence Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const STORAGE_KEY = 'kabalagala_digital_pathways_progress';
+        const checkboxes = document.querySelectorAll('.task-checkbox');
+        const progressBar = document.getElementById('progress-bar');
+        const progressPercent = document.getElementById('progress-percent');
+        const progressCount = document.getElementById('progress-count');
+        const resetBtn = document.getElementById('reset-progress');
+
+        // Restore saved checklist state
+        let savedState = {};
+        try {
+          savedState = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        } catch (e) {
+          savedState = {};
+        }
+
+        checkboxes.forEach(function (cb) {
+          const taskId = cb.getAttribute('data-task-id');
+          if (savedState[taskId]) {
+            cb.checked = true;
+          }
+
+          cb.addEventListener('change', function () {
+            savedState[taskId] = cb.checked;
+            try {
+              localStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
+            } catch (e) {}
+            updateProgress();
+          });
+        });
+
+        function updateProgress() {
+          const total = checkboxes.length;
+          let completed = 0;
+          checkboxes.forEach(function (cb) {
+            if (cb.checked) completed++;
+          });
+          const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+          if (progressBar) progressBar.style.width = percent + '%';
+          if (progressPercent) progressPercent.textContent = percent + '%';
+          if (progressCount) progressCount.textContent = completed + ' of ' + total + ' tasks completed';
+        }
+
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function () {
+            if (confirm('Do you want to reset your saved checklist progress?')) {
+              savedState = {};
+              try {
+                localStorage.removeItem(STORAGE_KEY);
+              } catch (e) {}
+              checkboxes.forEach(function (cb) {
+                cb.checked = false;
+              });
+              updateProgress();
+            }
+          });
+        }
+
+        updateProgress();
+      });
+    </script>
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="about.html#sources">Sources</a> |
+      <a href="about.html#privacy">Privacy</a>
+    </p>
+    <p>Kabalagala Digital Pathways &middot; Developed by <strong>Wanyana Christin</strong> &middot; Victoria University Kampala</p>
+  </footer>
+
+  <script>
+    (function () {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+      function setTheme(theme) {
+        const isDark = (theme === 'dark');
+        htmlEl.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        if (themeToggleBtn) themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+        const logoSrc = isDark ? 'images/logo-dark.svg' : 'images/logo-light.svg';
+        document.querySelectorAll('img.logo-icon, [data-theme-logo="true"]').forEach(function (img) {
+          img.src = logoSrc;
+        });
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) favicon.href = logoSrc;
+        try { localStorage.setItem('kdp_theme', theme); } catch (e) {}
+      }
+      const savedTheme = localStorage.getItem('kdp_theme') || 'light';
+      setTheme(savedTheme);
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+          const current = htmlEl.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

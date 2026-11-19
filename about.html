@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Kabalagala Digital Pathways</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-light.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kdp_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true">
+        <span>Kabalagala Digital Pathways</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="careers.html">ICT Careers</a></li>
+        <li><a href="safety.html">Online Safety</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode"
+      aria-label="Toggle theme">
+      🌙
+    </button>
+  </header>
+
+  <main>
+    <h1>About Kabalagala Digital Pathways</h1>
+
+    <h2>Purpose and Audience</h2>
+    <div class="card">
+      <p>Kabalagala Digital Pathways is a student project created by Group 16 at Victoria University. The website helps
+        young people in Makindye Division (especially around Kabalagala) find clear information about beginner ICT
+        training.</p>
+      <p>It is designed for school leavers, job seekers and ICT beginners aged roughly 15–30, as well as teachers and
+        mentors who guide them.</p>
+      <p>The site only provides information. It does not process applications or collect personal data.</p>
+    </div>
+
+    <h2 id="sources">Sources and Update Policy</h2>
+    <div class="card">
+      <p>We only list training providers after confirming details on official pages. Each provider card shows a “last
+        checked” date.</p>
+      <h3>Main sources used in Project 1</h3>
+      <ul>
+        <li>Uganda Bureau of Statistics (2025). Kampala Capital City County and Division Profiles, Table 11.</li>
+        <li>Ahimbisibwe, P., & Seddugge, E. (2026, 29 January). Awareness of youth programmes in Uganda is high – so why
+          is participation so low? African Cities Research Consortium.</li>
+        <li>Kampala Capital City Authority (2025, 2 June). KCCA, MTN partner to empower youth with digital skills.</li>
+        <li>The Independent / Nile Post (2026). Reports on MTN Internet Bus graduations at Kabalagala Youth Centre.</li>
+      </ul>
+      <p>We aim to review and update the provider information at least once per semester.</p>
+    </div>
+
+    <h2 id="contact">Contact & Inquiries</h2>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Direct Contact Details</h3>
+        <p>Have questions about listed training programs, want to suggest a new verified ICT hub, or noticed an outdated
+          link? Reach out to our community support team:</p>
+
+        <div class="contact-detail-item">
+          <strong>Project Inquiry Email:</strong>
+          <p><a href="mailto:info@kabalagaladigitalpathways.ac.ug">info@kabalagaladigitalpathways.ac.ug</a></p>
+        </div>
+
+        <div class="contact-detail-item">
+          <strong>Community Helpline &amp; WhatsApp:</strong>
+          <p>
+            <a href="https://wa.me/256700123456" class="btn-whatsapp" target="_blank" rel="noopener">
+              <span>Chat on WhatsApp (+256 700 123 456)</span>
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-detail-item">
+          <strong>Academic Department:</strong>
+          <p>Victoria University Kampala &middot; Faculty of Science &amp; Technology (Group 16)</p>
+        </div>
+
+        <div class="contact-detail-item">
+          <strong>Partner Center:</strong>
+          <p>Kabalagala Youth One Stop Centre, Makindye Division, Kampala</p>
+        </div>
+
+        <p class="note"><em>Note: Educational inquiries are answered within 2–3 university working days.</em></p>
+      </div>
+
+      <div class="card">
+        <h3>Send an Inquiry</h3>
+        <form action="mailto:info@kabalagaladigitalpathways.ac.ug" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" name="fullName" class="form-control" placeholder="e.g. Sarah Namubiru"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-info">Email or Phone Contact</label>
+            <input type="text" id="contact-info" name="contact" class="form-control"
+              placeholder="e.g. sarah@example.com or 0700 123456" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message / Training Question</label>
+            <textarea id="contact-message" name="message" class="form-control"
+              placeholder="What training program or question would you like help with?" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="card">
+      <h3>Is this website run by KCCA or MTN?</h3>
+      <p>No. This is a student project from Victoria University. We only share publicly available information.</p>
+
+      <h3>Can I apply for training through this website?</h3>
+      <p>No. All applications must be made on the provider’s official website or at the training centre.</p>
+
+      <h3>Do you collect my personal information?</h3>
+      <p>We only collect the contact information you voluntarily submit in our inquiry form to reply to your questions.
+        Your details are never sold, tracked, or used for commercial marketing.</p>
+
+      <h3>How can I suggest a new training provider?</h3>
+      <p>You can use the inquiry form above, email <a
+          href="mailto:info@kabalagaladigitalpathways.ac.ug">info@kabalagaladigitalpathways.ac.ug</a>, or contact Group 16
+        through your lecturer or class representative. We only add providers after official verification.</p>
+    </div>
+
+    <h2 id="privacy">Privacy Notice</h2>
+    <div class="card">
+      <p><strong>Privacy Commitment:</strong> We only collect the contact information you voluntarily submit in our
+        inquiry form to reply to your questions. Your details are never sold, tracked, or used for commercial marketing.
+      </p>
+      <p>This website does not use tracking cookies or third-party advertising trackers. When you reach out via our
+        contact inquiry form or email, your details are retained solely to respond to your inquiry and are never shared
+        with third parties.</p>
+      <p>External links (for example to KCCA or news sites) are provided for information only. Those sites have their
+        own independent privacy policies.</p>
+      <p>If you have questions about this project or your data, email <a
+          href="mailto:info@kabalagaladigitalpathways.ac.ug">info@kabalagaladigitalpathways.ac.ug</a> or speak to a member of
+        Group 16.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="about.html#sources">Sources</a> |
+      <a href="about.html#privacy">Privacy</a>
+    </p>
+    <p>Kabalagala Digital Pathways &middot; Developed by <strong>Wanyana Christin</strong> &middot; Victoria University
+      Kampala</p>
+  </footer>
+
+  <script>
+    (function () {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+      function setTheme(theme) {
+        const isDark = (theme === 'dark');
+        htmlEl.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        if (themeToggleBtn) themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+        const logoSrc = isDark ? 'images/logo-dark.svg' : 'images/logo-light.svg';
+        document.querySelectorAll('img.logo-icon, [data-theme-logo="true"]').forEach(function (img) {
+          img.src = logoSrc;
+        });
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) favicon.href = logoSrc;
+        try { localStorage.setItem('kdp_theme', theme); } catch (e) { }
+      }
+      const savedTheme = localStorage.getItem('kdp_theme') || 'light';
+      setTheme(savedTheme);
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+          const current = htmlEl.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

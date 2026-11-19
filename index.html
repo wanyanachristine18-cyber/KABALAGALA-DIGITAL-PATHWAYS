@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabalagala Digital Pathways – Makindye ICT Training & Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-light.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kdp_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== STICKY FROSTED-GLASS HEADER ===== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">
+          <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true">
+          <span>Kabalagala Digital Pathways</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#dashboard" class="nav-link" id="nav-dashboard-link">My Hub</a></li>
+          <li><a href="#learn" class="nav-link">Learn</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
+          <li><a href="#opportunities" class="nav-link">Opportunities</a></li>
+          <li><a href="#careers" class="nav-link">Careers</a></li>
+          <li><a href="#safety" class="nav-link">Safety</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Switcher (Dark / Light) -->
+        <button type="button" class="btn-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          🌙
+        </button>
+
+        <!-- Auth Button / Profile -->
+        <button type="button" class="btn-auth" id="open-auth-btn">
+          <span>Sign In / Register</span>
+        </button>
+
+        <div class="user-profile-badge" id="user-profile-badge">
+          <div class="user-avatar" id="user-avatar-initials">S</div>
+          <span id="user-display-name">Student</span>
+          <button type="button" class="btn-logout" id="logout-btn" title="Sign out">✕</button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== SECTION 1: HOME (HERO & OVERVIEW) ===== -->
+    <section id="home" class="spa-section" style="padding-top: 10px;">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="hero-pill">Makindye Division &middot; Kabalagala Youth Initiative</div>
+          <h1>Find Clear, Verified ICT Training in Makindye</h1>
+          <p>Many young people hear about digital skills programs but lack clear details on costs, eligibility, and how to apply. We connect youth to verified community centers, structured learning modules, and entry-level career pathways in one unified portal.</p>
+          
+          <div class="hero-actions">
+            <a href="#quiz" class="btn btn-accent">Take 1-Min Career Quiz ★</a>
+            <a href="#opportunities" class="btn btn-outline">Explore Verified Hubs</a>
+            <a href="#learn" class="btn btn-outline">Start Basic Checklist</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>100% Free</h4>
+              <p>Community programs with zero hidden tuition</p>
+            </div>
+            <div class="stat-item">
+              <h4>5 Local Centers</h4>
+              <p>Verified in Makindye &amp; Kabalagala</p>
+            </div>
+            <div class="stat-item">
+              <h4>14 Core Skills</h4>
+              <p>Self-paced checklist + Certificate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Three simple steps to build your digital independence in Kabalagala.</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-verified">Step 01</span>
+          <h3>1. Discover Your Best Fit</h3>
+          <p>Take our rapid 3-question Career Matcher Quiz to identify which ICT path suits your natural interests and device access.</p>
+          <div class="card-footer">
+            <a href="#quiz" class="btn btn-primary btn-sm">Take Quiz →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-free">Step 02</span>
+          <h3>2. Master Core Tasks</h3>
+          <p>Complete the 14-task checklist and test live HTML code in our browser playground to unlock your digital readiness certificate.</p>
+          <div class="card-footer">
+            <a href="#learn" class="btn btn-accent btn-sm">Start Learning →</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-cert">Step 03</span>
+          <h3>3. Join a Lab or Apply</h3>
+          <p>Connect with verified centers like MTN Skills Academy, UICT Nakawa, or KCCA Employment Bureau to transition into employment.</p>
+          <div class="card-footer">
+            <a href="#opportunities" class="btn btn-primary btn-sm">Find Hubs →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: CAREER MATCHER QUIZ ===== -->
+    <section id="quiz" class="spa-section">
+      <h2 class="section-title">ICT Career Matcher Quiz</h2>
+      <p class="section-subtitle">Not sure where to begin? Answer 3 quick questions to discover the best digital pathway for your interests, device access, and goals.</p>
+
+      <div class="quiz-container" id="quiz-container">
+        <!-- Step 1 -->
+        <div class="quiz-step active" data-step="1">
+          <div class="quiz-question-title">Question 1 of 3: What kind of work sounds most exciting to you?</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Select one option that best describes your personality:</p>
+          
+          <div class="quiz-options">
+            <div class="quiz-option-card" data-val="office">
+              <strong>📄 Organizing &amp; Typing</strong>
+              <span>Entering data into spreadsheets, typing business reports, and filing office records.</span>
+            </div>
+            <div class="quiz-option-card" data-val="web">
+              <strong>💻 Building Websites &amp; Code</strong>
+              <span>Learning how web pages work, writing HTML code, and building digital tools.</span>
+            </div>
+            <div class="quiz-option-card" data-val="tech">
+              <strong>🛠️ Troubleshooting &amp; Setup</strong>
+              <span>Fixing desktop problems, connecting WiFi printers, and helping office staff with IT support.</span>
+            </div>
+            <div class="quiz-option-card" data-val="service">
+              <strong>📱 Social Media &amp; Customer Care</strong>
+              <span>Designing simple flyers, answering customer queries on WhatsApp, and e-commerce marketing.</span>
+            </div>
+          </div>
+
+          <div class="quiz-nav-btns" style="justify-content: flex-end;">
+            <button type="button" class="btn btn-primary btn-sm quiz-next-btn" disabled>Next Question →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="quiz-step" data-step="2">
+          <div class="quiz-question-title">Question 2 of 3: What device do you have access to right now?</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Choose your primary learning hardware:</p>
+          
+          <div class="quiz-options">
+            <div class="quiz-option-card" data-val="phone">
+              <strong>📲 Smartphone Only</strong>
+              <span>I use an Android/iPhone with mobile data for most of my internet tasks.</span>
+            </div>
+            <div class="quiz-option-card" data-val="cafe">
+              <strong>🏢 Community Lab / Cyber Cafe</strong>
+              <span>I can access desktop computers at Kabalagala Youth Centre or a local cafe.</span>
+            </div>
+            <div class="quiz-option-card" data-val="laptop">
+              <strong>💻 Personal Laptop / Home PC</strong>
+              <span>I have my own laptop or desktop to practise anytime.</span>
+            </div>
+          </div>
+
+          <div class="quiz-nav-btns">
+            <button type="button" class="btn btn-outline-dark btn-sm quiz-prev-btn">← Back</button>
+            <button type="button" class="btn btn-primary btn-sm quiz-next-btn" disabled>Next Question →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quiz-step" data-step="3">
+          <div class="quiz-question-title">Question 3 of 3: What is your main priority over the next 3 months?</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Select your immediate target:</p>
+          
+          <div class="quiz-options">
+            <div class="quiz-option-card" data-val="job">
+              <strong>💼 Get an Entry-Level Job</strong>
+              <span>Prepare my CV and apply for administrative, cashier, or clerk roles in Kabalagala and Kampala.</span>
+            </div>
+            <div class="quiz-option-card" data-val="cert">
+              <strong>📜 Earn a Recognized Certificate</strong>
+              <span>Complete a structured course with a formal credential (e.g. MTN Skills Academy).</span>
+            </div>
+            <div class="quiz-option-card" data-val="freelance">
+              <strong>🚀 Freelance / Small Business Tech</strong>
+              <span>Use digital skills to market a side business, create flyers, and manage mobile money records.</span>
+            </div>
+          </div>
+
+          <div class="quiz-nav-btns">
+            <button type="button" class="btn btn-outline-dark btn-sm quiz-prev-btn">← Back</button>
+            <button type="button" class="btn btn-accent btn-sm quiz-finish-btn" disabled>See My Recommendation ★</button>
+          </div>
+        </div>
+
+        <!-- Results Box -->
+        <div id="quiz-result" class="quiz-result-box" style="display: none;">
+          <h3 style="color: var(--primary); margin: 0;">Your Recommended ICT Pathway:</h3>
+          <div class="quiz-result-badge" id="quiz-res-title">Office Administration &amp; Data Entry</div>
+          <p id="quiz-res-desc" style="max-width: 650px; margin: 10px auto 20px; font-size: 0.95rem;"></p>
+          
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="#learn" class="btn btn-primary btn-sm" id="quiz-res-learn-btn">Start Suggested Checklist Modules →</a>
+            <a href="#opportunities" class="btn btn-accent btn-sm" id="quiz-res-opp-btn">View Matching Makindye Hubs →</a>
+            <button type="button" class="btn btn-outline-dark btn-sm" id="quiz-retake-btn">Retake Quiz ↺</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: MY LEARNING HUB (STUDENT DASHBOARD) ===== -->
+    <section id="dashboard" class="spa-section">
+      <div class="dashboard-hub">
+        <div class="dashboard-header">
+          <div class="dashboard-user">
+            <h3 id="dash-greeting">Welcome to Your Study Dashboard!</h3>
+            <p id="dash-subtext">Track your digital literacy milestones and saved community opportunities.</p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary btn-sm" id="dash-action-btn">Sign In to Save Progress</button>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <h5>Completed Skills</h5>
+            <div class="metric" id="dash-tasks-metric">0 / 14</div>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Tasks finished on the checklist</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h5>Overall Completion</h5>
+            <div class="metric" id="dash-percent-metric">0%</div>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Basic digital foundation</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h5>Saved Opportunities</h5>
+            <div class="metric" id="dash-saved-metric">0</div>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Bookmarked training programs</p>
+          </div>
+
+          <div class="dashboard-card">
+            <h5>Current Learning Track</h5>
+            <div class="metric" style="font-size: 1.25rem; color: var(--accent);">Digital Beginner</div>
+            <p style="font-size: 0.85rem; margin-top: 4px;">Makindye Youth Cohort</p>
+          </div>
+        </div>
+
+        <!-- 100% Certificate Unlocked Banner -->
+        <div id="cert-unlock-banner" class="cert-unlock-banner" style="display: none;">
+          <div>
+            <h4 style="margin: 0; color: #92400e; font-size: 1.15rem;">🎓 Congratulations! You completed all 14 skills!</h4>
+            <p style="margin: 4px 0 0; color: #78350f; font-size: 0.9rem;">Your foundational certificate is ready to preview, download, and print.</p>
+          </div>
+          <button type="button" class="btn btn-accent btn-sm" id="open-cert-btn">View &amp; Print My Certificate 📜</button>
+        </div>
+
+        <!-- Bookmarked Opportunities Widget -->
+        <div class="saved-opportunities-box">
+          <h4>Your Bookmarked Training Programs</h4>
+          <div id="saved-empty-message">
+            <p style="font-size: 0.9rem; margin: 0;">No bookmarked opportunities yet. Click <strong>"★ Bookmark"</strong> on any training card below to save it here!</p>
+          </div>
+          <ul class="saved-items-list" id="saved-items-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: LEARN (INTERACTIVE CHECKLIST & SANDBOX) ===== -->
+    <section id="learn" class="spa-section">
+      <h2 class="section-title">Learn Basic Digital Skills</h2>
+      <p class="section-subtitle">Self-paced modules designed for absolute beginners. Check off each skill as you complete it — your progress is automatically saved to your browser!</p>
+
+      <!-- Interactive Progress Tracker -->
+      <div class="progress-container card" id="progress-tracker">
+        <div class="progress-header">
+          <div>
+            <h3 style="margin: 0; color: var(--primary);">Skills Checklist Progress: <span id="progress-percent">0%</span></h3>
+            <span id="progress-count" style="font-weight: 600; color: var(--accent); font-size: 0.9rem;">0 of 14 tasks completed</span>
+            <div id="progress-auth-badge" style="margin-top: 6px; font-size: 0.86rem; color: #b45309; display: flex; align-items: center; gap: 8px;">
+              <span>🔒 Create an account to save and track your progress.</span>
+              <button type="button" class="btn btn-outline-dark btn-sm" id="progress-auth-btn" style="padding: 2px 8px; font-size: 0.78rem;">Create Free Account</button>
+            </div>
+          </div>
+          <button type="button" id="reset-progress" class="btn btn-outline-dark btn-sm">Reset Progress</button>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-bar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <!-- Module 1 -->
+        <div class="card">
+          <img src="images/computer-basics.jpg" alt="Student practicing computer basics" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-verified">Module 1</span>
+            <span class="badge badge-free">Beginner</span>
+          </div>
+          <h3>1. Computer &amp; File Basics</h3>
+          <p>Understand physical computer hardware, desktop controls, and file organisation.</p>
+          
+          <ul class="checklist">
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="comp-1">
+                <span>Learn how to safely turn a computer on and shut down via the Start menu</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="comp-2">
+                <span>Master mouse actions: left click, double click, right click context menu, and scrolling</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="comp-3">
+                <span>Create a folder on the Desktop named <strong>My Learning</strong></span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="comp-4">
+                <span>Open Notepad, type your name and today's date, and save it as <code>practice1.txt</code></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="card">
+          <div class="badge-group">
+            <span class="badge badge-verified">Module 2</span>
+            <span class="badge badge-free">Web &amp; Email</span>
+          </div>
+          <h3>2. Internet Search &amp; Email</h3>
+          <p>Navigate the web safely and set up professional digital correspondence.</p>
+
+          <ul class="checklist">
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="net-1">
+                <span>Open a browser (Chrome, Firefox, or Edge) and search for "free ICT training Kabalagala"</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="net-2">
+                <span>Inspect URL addresses to spot trusted official domains (<code>.go.ug</code>, <code>.ac.ug</code>)</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="net-3">
+                <span>Set up a secure personal email (Gmail/Outlook) with a strong password (8+ characters)</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="net-4">
+                <span>Draft a practice email with a clear subject line and polite professional sign-off</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="card">
+          <div class="badge-group">
+            <span class="badge badge-verified">Module 3</span>
+            <span class="badge badge-free">Office Tools</span>
+          </div>
+          <h3>3. Document-Making Practice</h3>
+          <p>Create resumes, letters, and reports using word processing software.</p>
+
+          <ul class="checklist">
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="doc-1">
+                <span>Open Microsoft Word, Google Docs, or LibreOffice Writer</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="doc-2">
+                <span>Type a short 4-sentence paragraph describing your personal ICT career goal</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="doc-3">
+                <span>Format text: change font size to 16pt, bold key words, and add bullet points</span>
+              </label>
+            </li>
+            <li>
+              <label class="checklist-item">
+                <input type="checkbox" class="task-checkbox" data-task-id="doc-4">
+                <span>Save the document as <code>my-goal.docx</code> (and export a PDF copy)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Module 4: Full-Width Featured Lab -->
+      <div class="card card-featured-module">
+        <div class="card-featured-header">
+          <div class="card-featured-info">
+            <div class="badge-group">
+              <span class="badge badge-verified">Module 4</span>
+              <span class="badge badge-cert">Coding Intro</span>
+              <span class="badge badge-free">Interactive Live Sandbox</span>
+            </div>
+            <h3 style="font-size: 1.45rem; margin: 6px 0 8px; color: var(--primary);">4. First HTML Web Challenge &amp; Live Code Playground</h3>
+            <p style="margin-bottom: 0; font-size: 0.95rem;">HTML is the foundation of the modern web. Type your code directly into the interactive editor below — the live output preview window renders your changes automatically in real time!</p>
+          </div>
+
+          <div class="card-featured-tasks">
+            <strong style="display: block; font-size: 0.82rem; color: var(--accent); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Module 4 Milestones:</strong>
+            <ul class="checklist" style="margin: 0;">
+              <li>
+                <label class="checklist-item" style="padding: 4px 0;">
+                  <input type="checkbox" class="task-checkbox" data-task-id="html-1">
+                  <span>Edit the heading text with your real name and click Run</span>
+                </label>
+              </li>
+              <li>
+                <label class="checklist-item" style="padding: 4px 0;">
+                  <input type="checkbox" class="task-checkbox" data-task-id="html-2">
+                  <span>Add a new paragraph <code>&lt;p&gt;...&lt;/p&gt;</code> and observe the preview</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Live Interactive HTML Sandbox -->
+        <div class="sandbox-box">
+          <div class="sandbox-toolbar">
+            <h4>⚡ Live HTML Playground: Try It Right Here!</h4>
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="btn btn-accent btn-sm" id="run-sandbox-btn">Run Code ▶</button>
+              <button type="button" class="btn btn-outline btn-sm" id="reset-sandbox-btn">Reset ↺</button>
+            </div>
+          </div>
+          <div class="sandbox-grid">
+            <div class="sandbox-editor-wrapper">
+              <div class="sandbox-editor-label">HTML Code Editor (Type Here)</div>
+              <textarea class="sandbox-textarea" id="sandbox-code" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { font-family: sans-serif; padding: 15px; color: #0f2b46; background: #f8fafc; }
+    h1 { color: #d97706; margin-bottom: 5px; font-size: 20px; }
+    p { font-size: 14px; line-height: 1.4; color: #334155; }
+    .badge { background: #1a4a75; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello Kabalagala!&lt;/h1&gt;
+  &lt;p&gt;I am learning digital skills on Kabalagala Digital Pathways.&lt;/p&gt;
+  &lt;span class="badge"&gt;Makindye Division Learner&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+            </div>
+            <div class="sandbox-preview-wrapper">
+              <div class="sandbox-editor-label" style="background: #e2e8f0; color: #475569;">Live Output Preview</div>
+              <iframe class="sandbox-preview-frame" id="sandbox-preview" sandbox="allow-scripts" title="Live HTML Preview"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: VIDEO LIBRARY & RESEARCH REPOSITORY ===== -->
+    <section id="videos" class="spa-section">
+      <h2 class="section-title">Video Learning Library</h2>
+      <p class="section-subtitle">Visual, step-by-step video tutorials from top educational channels. Watch directly on the platform without leaving.</p>
+
+      <div class="video-grid">
+        <!-- Video 1: Computer Basics -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/zoxcfq0v4Yg" title="Computer Basics for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-free">Free Lesson</span>
+              <span class="badge badge-verified">GCF LearnFree</span>
+            </div>
+            <h4>Computer Basics: Hardware &amp; OS</h4>
+            <p>An accessible overview of computer components, CPU, ports, desktop screens, and operating systems for absolute beginners.</p>
+          </div>
+        </div>
+
+        <!-- Video 2: Word Processing -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/S-nHYzK-BVg" title="Word Processing & Typing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-free">Office Skills</span>
+              <span class="badge badge-verified">Productivity</span>
+            </div>
+            <h4>Microsoft Word &amp; Document Basics</h4>
+            <p>Step-by-step instruction on creating formatted documents, adjusting margins, inserting tables, and exporting professional PDFs.</p>
+          </div>
+        </div>
+
+        <!-- Video 3: Microsoft Excel -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/rwbho0CgEAE" title="Microsoft Excel for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-cert">Data Skills</span>
+              <span class="badge badge-verified">Essential</span>
+            </div>
+            <h4>Excel &amp; Spreadsheet Essentials</h4>
+            <p>Learn rows, columns, simple calculation formulas (SUM, AVERAGE), and data organization for entry-level data clerk roles.</p>
+          </div>
+        </div>
+
+        <!-- Video 4: HTML Course -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/kUMe1FH4CHE" title="HTML Course for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-cert">Web Foundation</span>
+              <span class="badge badge-verified">freeCodeCamp</span>
+            </div>
+            <h4>HTML Full Tutorial for Beginners</h4>
+            <p>Learn how web pages are built from scratch: headings, paragraphs, images, links, tables, and semantic container structures.</p>
+          </div>
+        </div>
+
+        <!-- Video 5: Cybersecurity & Online Safety -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/sdpxddDzXfE" title="Internet Safety & Cybersecurity" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-req">Cyber Hygiene</span>
+              <span class="badge badge-verified">Safety First</span>
+            </div>
+            <h4>Internet Safety &amp; Scam Prevention</h4>
+            <p>Practical safety habits to secure mobile accounts, detect phishing recruitment emails, and set up two-factor authentication (2FA).</p>
+          </div>
+        </div>
+
+        <!-- Video 6: Digital Design & Freelancing -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/un50bs4hnCo" title="Graphic Design for Beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <div class="badge-group">
+              <span class="badge badge-free">Creative Track</span>
+              <span class="badge badge-verified">Freelance Skills</span>
+            </div>
+            <h4>Digital Flyer Design for Business</h4>
+            <p>Create promotional posters, social media banners, and product flyers on free web design tools to market local micro-businesses.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Free Resource Repository -->
+      <h3 style="margin-top: 40px; margin-bottom: 12px; color: var(--primary);">Curated Global Free Learning Portals</h3>
+      <p style="margin-bottom: 20px;">Take your self-study further with these internationally recognized free platforms:</p>
+
+      <div class="card-grid-4">
+        <div class="card" style="padding: 18px;">
+          <h4 style="color: var(--primary); margin-bottom: 6px;">freeCodeCamp</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 12px;">Interactive coding curriculum with free verified certifications in Web Design and Python.</p>
+          <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Visit freeCodeCamp ↗</a>
+        </div>
+
+        <div class="card" style="padding: 18px;">
+          <h4 style="color: var(--primary); margin-bottom: 6px;">Microsoft Learn</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 12px;">Official digital literacy paths, AI fundamentals, cloud tools, and productivity badges.</p>
+          <a href="https://learn.microsoft.com/" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Visit Microsoft Learn ↗</a>
+        </div>
+
+        <div class="card" style="padding: 18px;">
+          <h4 style="color: var(--primary); margin-bottom: 6px;">Cisco Skills for All</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 12px;">Foundational networking, IT support essentials, and cybersecurity introduction courses.</p>
+          <a href="https://skillsforall.com/" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Visit Cisco Skills ↗</a>
+        </div>
+
+        <div class="card" style="padding: 18px;">
+          <h4 style="color: var(--primary); margin-bottom: 6px;">Grow with Google</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 12px;">Digital skills for Africa, online marketing, mobile app basics, and small business tech.</p>
+          <a href="https://grow.google/intl/en_africa/" target="_blank" rel="noopener" class="btn btn-outline-dark btn-sm">Visit Google Africa ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: OPPORTUNITIES (VERIFIED DIRECTORY) ===== -->
+    <section id="opportunities" class="spa-section">
+      <h2 class="section-title">Verified Training Opportunities in Makindye &amp; Kabalagala</h2>
+      <p class="section-subtitle">Official beginner ICT training centers linked to Kabalagala Youth One Stop Centre, national ministries, and municipal hubs. Last verified in 2026.</p>
+
+      <!-- Opportunity Search & Category Filter Controls -->
+      <div class="opp-controls-wrapper" style="margin: 20px 0 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; max-width: 520px; width: 100%;">
+          <input type="text" id="opp-search-input" class="form-control" placeholder="🔍 Search opportunities (e.g. MTN, Kabalagala, laptop, Nakawa)..." style="padding-left: 16px; width: 100%; border-radius: var(--radius-pill);" aria-label="Search opportunities">
+          <button type="button" id="clear-opp-search" style="display: none; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1rem; padding: 2px 6px;" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="filter-bar" style="margin: 0;">
+          <button type="button" class="filter-btn active" data-filter="all">All Programs</button>
+          <button type="button" class="filter-btn" data-filter="free">100% Free</button>
+          <button type="button" class="filter-btn" data-filter="cert">Certificate Included</button>
+          <button type="button" class="filter-btn" data-filter="mobile">Mobile Friendly</button>
+          <button type="button" class="filter-btn" data-filter="laptop">Requires Laptop</button>
+        </div>
+      </div>
+
+      <div id="opp-no-results" style="display: none; padding: 30px; text-align: center; background: var(--surface); border: 1px dashed var(--border-strong); border-radius: var(--radius-md); margin-bottom: 24px;">
+        <p style="font-size: 1.05rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px;">No matching training opportunities found.</p>
+        <p style="font-size: 0.88rem; color: var(--text-light); margin: 0;">Try adjusting your search terms or clearing the category filter.</p>
+      </div>
+
+      <div class="card-grid" id="opportunity-grid">
+        <!-- Opportunity 1: MTN Skills Academy -->
+        <div class="card opp-card" data-tags="free cert verified">
+          <img src="images/kabalagala-centre.jpg" alt="Computers at Kabalagala Youth Centre" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-free">100% Free</span>
+            <span class="badge badge-cert">Certificate Included</span>
+            <span class="badge badge-verified">Verified 2026</span>
+          </div>
+          <div class="card-body">
+            <h3>MTN Skills Academy</h3>
+            <p><strong>Location:</strong> Kabalagala Youth One Stop Centre (Makindye Division)</p>
+            <p><strong>What it offers:</strong> Hands-on courses in computer navigation, data fundamentals, and digital tools installed on 15 dedicated workstations.</p>
+            <p><strong>Prerequisites:</strong> None. 15 lab computers provided on-site.</p>
+            <p><strong>Eligibility:</strong> Young people aged 15–30 residing in Makindye or Kabalagala &amp; Greater Kampala.</p>
+            <p><strong>Fee:</strong> 100% Free under KCCA &amp; MTN public partnership.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://kcca.go.ug/news/964" class="btn btn-accent btn-sm" target="_blank" rel="noopener">Official Registration ↗</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-1" data-opp-name="MTN Skills Academy">★ Bookmark</button>
+          </div>
+        </div>
+
+        <!-- Opportunity 2: MTN Internet Bus -->
+        <div class="card opp-card" data-tags="free mobile cert">
+          <img src="images/mtn-skills-bus.jpg" alt="MTN Mobile Internet Bus" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-free">100% Free</span>
+            <span class="badge badge-mobile">Mobile Friendly</span>
+            <span class="badge badge-cert">Certificate Included</span>
+          </div>
+          <div class="card-body">
+            <h3>MTN Internet Bus Digital Literacy</h3>
+            <p><strong>Location:</strong> Rotational stops across Makindye (Kabalagala base)</p>
+            <p><strong>What it offers:</strong> Mobile solar-powered classroom with satellite connectivity. Practical computer literacy, internet safety, and basic e-commerce.</p>
+            <p><strong>Prerequisites:</strong> Open to absolute beginners and school leavers.</p>
+            <p><strong>Eligibility:</strong> Youth and informal traders seeking foundational skills.</p>
+            <p><strong>Fee:</strong> 100% Free via MTN Foundation community outreach.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.independent.co.ug/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Check Bus Dates ↗</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-2" data-opp-name="MTN Internet Bus">★ Bookmark</button>
+          </div>
+        </div>
+
+        <!-- Opportunity 3: Makindye Tech Hub -->
+        <div class="card opp-card" data-tags="laptop cert verified">
+          <img src="images/hero-youth-ict.jpg" alt="Youth collaborating at Makindye Community Lab" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-req">Requires Laptop</span>
+            <span class="badge badge-cert">Certificate Included</span>
+            <span class="badge badge-verified">Verified 2026</span>
+          </div>
+          <div class="card-body">
+            <h3>Makindye Community ICT &amp; Tech Hub</h3>
+            <p><strong>Location:</strong> Near Kansanga / Ggaba Road, Makindye Division</p>
+            <p><strong>What it offers:</strong> Intermediate digital courses: website creation, office administration software, and entry-level freelance preparation.</p>
+            <p><strong>Prerequisites:</strong> Bring Your Own Laptop (BYOD) or reserve workstation.</p>
+            <p><strong>Eligibility:</strong> Youth with basic computer knowledge seeking job readiness.</p>
+            <p><strong>Fee:</strong> Subsidized community rate (need-based waivers available).</p>
+          </div>
+          <div class="card-footer">
+            <a href="#about" class="btn btn-outline-dark btn-sm">Inquire via Our Team</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-3" data-opp-name="Makindye Tech Hub">★ Bookmark</button>
+          </div>
+        </div>
+
+        <!-- Opportunity 4: UICT Nakawa (New) -->
+        <div class="card opp-card" data-tags="free cert verified">
+          <img src="images/computer-basics.jpg" alt="UICT Digital Transformation Centre" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-free">100% Free</span>
+            <span class="badge badge-cert">Certificate Included</span>
+            <span class="badge badge-verified">MoICT Uganda</span>
+          </div>
+          <div class="card-body">
+            <h3>UICT Digital Transformation Centre</h3>
+            <p><strong>Location:</strong> Uganda Institute of Information and Communications Technology, Nakawa</p>
+            <p><strong>What it offers:</strong> Flagship government digital skilling hub: free Cisco networking modules, HP LIFE business digital tools, and data analytics.</p>
+            <p><strong>Prerequisites:</strong> Open enrollment intakes throughout the academic calendar.</p>
+            <p><strong>Eligibility:</strong> Ugandan youth and school leavers looking for certified technical tracks.</p>
+            <p><strong>Fee:</strong> 100% Free (Government of Uganda &amp; Partner Subsidies).</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://www.uict.ac.ug/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Visit UICT Portal ↗</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-4" data-opp-name="UICT Nakawa Centre">★ Bookmark</button>
+          </div>
+        </div>
+
+        <!-- Opportunity 5: KCCA Employment Services Bureau (New) -->
+        <div class="card opp-card" data-tags="free mobile verified">
+          <img src="images/careers-tech.jpg" alt="KCCA Employment Services Bureau" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-free">100% Free</span>
+            <span class="badge badge-mobile">Job Matching</span>
+            <span class="badge badge-verified">KCCA Official</span>
+          </div>
+          <div class="card-body">
+            <h3>KCCA Employment Services Bureau</h3>
+            <p><strong>Location:</strong> Sezibwa Road, Nakasero / Accessible from Makindye</p>
+            <p><strong>What it offers:</strong> Job readiness clinics, digital CV preparation, workplace etiquette, and direct placement linkages to Kampala employers.</p>
+            <p><strong>Prerequisites:</strong> National ID or municipal youth registration.</p>
+            <p><strong>Eligibility:</strong> Job-seeking youth aged 18–35.</p>
+            <p><strong>Fee:</strong> Free municipal service.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://kcca.go.ug/" class="btn btn-accent btn-sm" target="_blank" rel="noopener">KCCA Job Bureau ↗</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-5" data-opp-name="KCCA Employment Bureau">★ Bookmark</button>
+          </div>
+        </div>
+
+        <!-- Opportunity 6: Refactory Academy & Clarke Tech Lab (Makindye) -->
+        <div class="card opp-card" data-tags="free cert verified">
+          <img src="images/hero-youth-ict.jpg" alt="Refactory Academy Kansanga" class="card-img">
+          <div class="badge-group">
+            <span class="badge badge-free">Free Cohorts</span>
+            <span class="badge badge-cert">Certificate Included</span>
+            <span class="badge badge-verified">Makindye Division</span>
+          </div>
+          <div class="card-body">
+            <h3>Refactory Academy &amp; Clarke Tech Lab</h3>
+            <p><strong>Location:</strong> Kansanga / Muyenga, Makindye Division, Kampala</p>
+            <p><strong>What it offers:</strong> Junior software testing, digital catalyst intakes, office automation bootcamps, and entry-level tech apprentice placements.</p>
+            <p><strong>Prerequisites:</strong> Open beginner cohorts, no university degree required.</p>
+            <p><strong>Eligibility:</strong> Youth aged 18–30 seeking practical technology careers.</p>
+            <p><strong>Fee:</strong> Subsidized &amp; 100% scholarship cohorts via foundation grants.</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://refactory.academy/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Explore Refactory ↗</a>
+            <button type="button" class="btn-icon-save" data-opp-id="opp-6" data-opp-name="Refactory Academy">★ Bookmark</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box" style="margin-top: 24px;">
+        <p><strong>Verification Notice:</strong> We only list programs confirmed through official municipal and corporate sources. Applications must be completed directly with the provider. Our platform charges zero application fees.</p>
+      </div>
+
+      <!-- Eligibility & Fee Comparison Table -->
+      <h3 style="margin-top: 36px; margin-bottom: 12px; color: var(--primary);">Quick Comparison Table</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Provider / Hub</th>
+              <th>Typical Fee</th>
+              <th>Hardware Required</th>
+              <th>Who Can Join</th>
+              <th>How to Confirm</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MTN Skills Academy</strong></td>
+              <td><span class="badge badge-free">Free</span></td>
+              <td>None (15 Lab PCs Provided)</td>
+              <td>Youth aged 15–30</td>
+              <td>KCCA news portal / Youth Centre visit</td>
+            </tr>
+            <tr>
+              <td><strong>MTN Internet Bus</strong></td>
+              <td><span class="badge badge-free">Free</span></td>
+              <td>None (Mobile Devices Provided)</td>
+              <td>School leavers &amp; community youth</td>
+              <td>Media announcements &amp; Youth One Stop noticeboard</td>
+            </tr>
+            <tr>
+              <td><strong>Makindye Tech Hub</strong></td>
+              <td><span class="badge badge-req">Subsidized</span></td>
+              <td>Laptop recommended</td>
+              <td>Beginners with basic literacy</td>
+              <td>Direct inquiry / Community desk</td>
+            </tr>
+            <tr>
+              <td><strong>UICT Nakawa Hub</strong></td>
+              <td><span class="badge badge-free">Free</span></td>
+              <td>Lab computers on site</td>
+              <td>Youth &amp; career starters</td>
+              <td>Official UICT website / Campus desk</td>
+            </tr>
+            <tr>
+              <td><strong>KCCA Employment Bureau</strong></td>
+              <td><span class="badge badge-free">Free</span></td>
+              <td>None (Career guidance)</td>
+              <td>Job seekers aged 18–35</td>
+              <td>KCCA Sezibwa Road Bureau</td>
+            </tr>
+            <tr>
+              <td><strong>Refactory Academy (Kansanga)</strong></td>
+              <td><span class="badge badge-free">Free Cohorts</span></td>
+              <td>Lab workstations on site</td>
+              <td>Youth aged 18–30</td>
+              <td>Refactory campus / Clarke University</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: YOUTH SUCCESS SPOTLIGHT ===== -->
+    <section id="success" class="spa-section">
+      <h2 class="section-title">Makindye Youth Success Spotlight</h2>
+      <p class="section-subtitle">Real experiences from young people in Makindye Division who applied basic digital skills to change their career journey.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="story-quote">I had never touched a computer keyboard before visiting Kabalagala Youth Centre. After 4 weeks on the basic skills checklist, I learned Word and Excel. Today I work as a data clerk at a wholesale store in Kansanga.</div>
+          <div class="story-author">— Denis K., 22 (Kansanga, Makindye)</div>
+          <span class="badge badge-free" style="margin-top: 8px;">Employed as Data Clerk</span>
+        </div>
+
+        <div class="card">
+          <div class="story-quote">The MTN Internet bus visited our area and I took the digital literacy course. Learning how to vet official .go.ug portals and use WhatsApp Business helped me avoid online scams and start marketing tailoring work online.</div>
+          <div class="story-author">— Prossy N., 24 (Kabalagala)</div>
+          <span class="badge badge-cert" style="margin-top: 8px;">Self-Employed Entrepreneur</span>
+        </div>
+
+        <div class="card">
+          <div class="story-quote">Understanding HTML code on this portal showed me that tech is not magic. It gave me the confidence to apply for the free UICT Cisco networking scholarship in Nakawa.</div>
+          <div class="story-author">— Ronald O., 21 (Kibuli, Makindye)</div>
+          <span class="badge badge-verified" style="margin-top: 8px;">ICT Scholarship Recipient</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 8: CAREERS (ENTRY-LEVEL ROLES & MATRIX) ===== -->
+    <section id="careers" class="spa-section">
+      <h2 class="section-title">Entry-Level ICT Career Pathways</h2>
+      <p class="section-subtitle">Realistic starting points for young beginners who complete basic digital skills training. Most roles require no expensive degree to begin.</p>
+
+      <div class="card" style="margin-bottom: 24px; padding: 20px;">
+        <img src="images/careers-tech.jpg" alt="Youth collaborating on technology work" class="card-img" style="height: 220px;">
+        <p style="margin: 0; font-size: 0.95rem;">Combine basic computer fluency, word processing skills, and a simple starter portfolio to apply for entry-level positions across businesses in Kabalagala and Greater Kampala.</p>
+      </div>
+
+      <div class="card-grid-4">
+        <div class="card">
+          <span class="badge badge-verified">Office Path</span>
+          <h3>Data Entry &amp; Typist</h3>
+          <p>Typing records, inventory, and invoices accurately into spreadsheets and databases for retail and logistics firms.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-verified">Technical Path</span>
+          <h3>IT Support Assistant</h3>
+          <p>Troubleshooting desktop operating systems, setting up office printers, fixing cable connections, and helping staff.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-verified">Creative Path</span>
+          <h3>Digital Content Assistant</h3>
+          <p>Designing promotional flyers, editing product images, managing basic company websites, and scheduling social media posts.</p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-verified">Service Path</span>
+          <h3>Online Support Agent</h3>
+          <p>Answering customer questions by email, WhatsApp Business, and chat for local e-commerce and delivery operations.</p>
+        </div>
+      </div>
+
+      <!-- Skills-to-Role Matrix -->
+      <h3 style="margin-top: 36px; margin-bottom: 12px; color: var(--primary);">Skills-to-Role Mapping Matrix</h3>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Skill You Master</th>
+              <th>Practical Application in Kabalagala</th>
+              <th>Matching Entry Roles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Keyboard &amp; Typing Speed</strong></td>
+              <td>Entering customer orders and filling accounting spreadsheets</td>
+              <td>Computer Operator, Data Clerk</td>
+            </tr>
+            <tr>
+              <td><strong>Word &amp; PDF Formatting</strong></td>
+              <td>Writing contracts, formal letters, and minutes of meetings</td>
+              <td>Office Assistant, Secretary</td>
+            </tr>
+            <tr>
+              <td><strong>Basic HTML &amp; Web Navigation</strong></td>
+              <td>Updating product listings, blog posts, and checking broken links</td>
+              <td>Junior Web Assistant, Content Updater</td>
+            </tr>
+            <tr>
+              <td><strong>Internet Safety &amp; 2FA</strong></td>
+              <td>Protecting company email accounts, customer records, and credentials</td>
+              <td>IT Junior Support, Admin Assistant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 9: ONLINE SAFETY ===== -->
+    <section id="safety" class="spa-section">
+      <h2 class="section-title">Online Safety &amp; Cyber Hygiene</h2>
+      <p class="section-subtitle">Essential habits to safeguard your phone, computer accounts, and personal money while searching for training or job opportunities online.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="badge badge-verified">Security Habit 01</span>
+          <h3>1. How to Vet a Website</h3>
+          <ul style="margin-top: 10px;">
+            <li>Always check the domain extension: look for <strong>.go.ug</strong> (government) and <strong>.ac.ug</strong> (academic institutions).</li>
+            <li>Look for the padlock symbol in the browser address bar (HTTPS encryption).</li>
+            <li>Be cautious of sites demanding registration money before providing course details.</li>
+            <li>Search the organization name + "scam" or "reviews" before submitting personal documents.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-verified">Security Habit 02</span>
+          <h3>2. Strong Passwords &amp; Two-Step Login (2FA)</h3>
+          <ul style="margin-top: 10px;">
+            <li>Use passwords with at least 8–12 characters mixing uppercase, lowercase, numbers, and symbols.</li>
+            <li>Never reuse the same password across multiple email and banking accounts.</li>
+            <li>Enable <strong>Two-Step Verification (2FA)</strong> on your Gmail, WhatsApp, and social accounts.</li>
+            <li>Never disclose verification codes sent via SMS to anyone who calls or texts you.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="warning-box" style="margin-top: 24px;">
+        <h4 style="color: #9a3412; margin-bottom: 6px;">Common Recruitment Red Flags in Kabalagala &amp; Kampala:</h4>
+        <ul style="margin-bottom: 0; color: #7c2d12;">
+          <li>Any recruiter asking for "interview fees", "uniform fees", or "medical examination deposits" via mobile money.</li>
+          <li>Urgent pressure: "Send money within 30 minutes to secure your slot."</li>
+          <li>Job offers sent through unofficial personal Gmail accounts claiming to represent reputable national agencies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 10: ABOUT & HYBRID CONTACT ===== -->
+    <section id="about" class="spa-section">
+      <h2 class="section-title">About Kabalagala Digital Pathways</h2>
+      <p class="section-subtitle">A civic technology and youth empowerment initiative founded at Victoria University Kampala, bridging the digital skills divide for young people in Makindye Division.</p>
+
+      <!-- 3 Core Pillars -->
+      <div class="about-pillars-grid">
+        <div class="about-pillar-card">
+          <div class="about-pillar-icon">📍</div>
+          <h3>1. Verified Local Access</h3>
+          <p>We eliminate misleading online ads by publishing directly verified, 100% tuition-free ICT hubs across Makindye and Kabalagala with confirmed hardware access.</p>
+        </div>
+
+        <div class="about-pillar-card">
+          <div class="about-pillar-icon">💡</div>
+          <h3>2. Self-Paced Literacy</h3>
+          <p>Our 14-task foundational checklist and in-browser live HTML code playground allow learners to build confidence on any smartphone, tablet, or shared desktop.</p>
+        </div>
+
+        <div class="about-pillar-card">
+          <div class="about-pillar-icon">🚀</div>
+          <h3>3. Direct Career Transitions</h3>
+          <p>We map core digital competencies directly to entry-level jobs across Kabalagala businesses (data clerks, typists, junior web assistants) backed by a verifiable completion certificate.</p>
+        </div>
+      </div>
+
+      <!-- Academic Governance Card -->
+      <div class="governance-card">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap;">
+          <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true" style="width: 44px; height: 44px; border-radius: 6px;">
+          <div>
+            <h3 style="margin: 0; color: var(--primary); font-size: 1.25rem;">Academic Governance &amp; Research Foundations</h3>
+            <span style="font-size: 0.88rem; color: var(--accent); font-weight: 600;">Faculty of Science &amp; Technology &middot; Victoria University Kampala</span>
+          </div>
+        </div>
+        <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">Kabalagala Digital Pathways was conceptualized and engineered under <strong>Group 16</strong> at Victoria University Kampala. The project addresses the critical urban digital divide documented by the <strong>African Cities Research Consortium (ACRC, 2026)</strong> and <strong>UBOS</strong>, which revealed that while youth in informal settlements have high mobile phone access, fewer than 18% possess formal digital skills required for office and data processing employment.</p>
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 0.88rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 12px;">
+          <div><strong>Academic Cohort:</strong> Group 16 (Academic Year 2026)</div>
+          <div><strong>Lead Platform Developer:</strong> <strong style="color: var(--accent);">Wanyana Christin</strong></div>
+          <div><strong>Target Community:</strong> Youth aged 15–30 (Makindye Division)</div>
+        </div>
+      </div>
+
+      <!-- Hybrid Contact System -->
+      <h3 style="margin-top: 36px; margin-bottom: 8px; color: var(--primary);">Community Helpdesk &amp; Inquiries</h3>
+      <p class="section-subtitle">Need guidance regarding local ICT centers, have a question about our checklist, or want to register a community hub? Contact our team:</p>
+      
+      <div class="contact-grid">
+        <!-- Direct Contact Details -->
+        <div class="card">
+          <h3>Direct Contact Details</h3>
+          <p>Reach out to our student community support desk via email or instant WhatsApp messaging:</p>
+          
+          <div style="margin-bottom: 16px;">
+            <strong style="color: var(--primary); display: block; font-size: 0.92rem; margin-bottom: 2px;">Official Project Email:</strong>
+            <p style="margin: 0;"><a href="mailto:info@kabalagaladigitalpathways.ac.ug" style="font-weight: 600; color: var(--primary-light);">info@kabalagaladigitalpathways.ac.ug</a></p>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <strong style="color: var(--primary); display: block; font-size: 0.92rem; margin-bottom: 6px;">Community WhatsApp Helpline:</strong>
+            <a href="https://wa.me/256700123456" class="btn-whatsapp" target="_blank" rel="noopener">
+              <span>💬 Chat on WhatsApp (+256 700 123 456)</span>
+            </a>
+            <span style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">● Active Support Desk: Mon – Fri (8:30 AM – 5:00 PM EAT)</span>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <strong style="color: var(--primary); display: block; font-size: 0.92rem; margin-bottom: 2px;">Academic Center:</strong>
+            <p style="margin: 0; font-size: 0.9rem;">Victoria University Kampala &middot; Victoria Towers, Jinja Road, Kampala</p>
+          </div>
+
+          <div>
+            <strong style="color: var(--primary); display: block; font-size: 0.92rem; margin-bottom: 2px;">Community Partner Center:</strong>
+            <p style="margin: 0; font-size: 0.9rem;">Kabalagala Youth One Stop Centre &middot; Ggaba Road, Makindye Division, Kampala</p>
+          </div>
+        </div>
+
+        <!-- 3-Field Inquiry Form -->
+        <div class="card">
+          <h3>Send an Inquiry</h3>
+          <form id="inquiry-form" action="mailto:info@kabalagaladigitalpathways.ac.ug" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="fullName" class="form-control" placeholder="e.g. Sarah Namubiru" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-info">Email or Phone Contact</label>
+              <input type="text" id="contact-info" name="contact" class="form-control" placeholder="e.g. sarah@example.com or 0700 123456" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message / Training Question</label>
+              <textarea id="contact-message" name="message" class="form-control" placeholder="Which ICT course or community center would you like more information about?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+          </form>
+          <div id="form-success-msg" style="display: none; margin-top: 12px; color: var(--success); font-weight: 600; font-size: 0.9rem;">
+            ✓ Thank you! Your inquiry has been submitted. Our team will reply shortly.
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Collapsible FAQ Accordion -->
+      <h3 style="margin-top: 40px; margin-bottom: 8px; color: var(--primary);">Frequently Asked Questions (FAQ)</h3>
+      <p class="section-subtitle">Quick answers to common questions about our platform, training eligibility, and certification.</p>
+      
+      <div class="faq-accordion" id="faq-accordion">
+        <div class="faq-item active">
+          <button type="button" class="faq-question">
+            <span>Are all listed training opportunities completely free?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Every program featured in our directory—including the MTN Skills Academy at Kabalagala Youth Centre and UICT Nakawa—is 100% tuition-free under Government of Uganda or corporate social investment partnerships. We charge zero application fees.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Who is eligible to participate in the Makindye youth programs?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The programs are open to Ugandan youth aged 15–30 residing in Makindye Division and Greater Kampala, including school leavers, informal traders, and absolute beginners seeking foundational computer and internet literacy.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Do I need to own a computer to use Kabalagala Digital Pathways?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No! Our platform, videos, and live HTML coding playground are 100% mobile-friendly and run directly inside any smartphone browser. For in-person lab practice, centers like Kabalagala Youth Centre provide free desktop workstations on site.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How do I earn and print the Digital Readiness Certificate?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Work through the 14 interactive tasks in the Learn section. Once all tasks are checked off (100% completion), an official certificate banner will unlock in "My Hub", allowing you to preview and print a PDF credential endorsed by Victoria University and developed by Wanyana Christin.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How is student privacy protected when using this portal?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We do not track your browsing activity with third-party tracking cookies or advertising pixels. Your study checklist and bookmarked centers are stored locally in your browser. Any contact information submitted in the inquiry form is used strictly to answer your questions and is never shared or sold.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODAL DIALOG: USER REGISTRATION / LOGIN ===== -->
+  <div class="modal-backdrop" id="auth-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" id="close-modal-btn" aria-label="Close modal">✕</button>
+      <h3>Student Study Account</h3>
+      <p id="auth-modal-hint" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Save your learning checklist progress and bookmarked opportunities to your browser profile.</p>
+
+      <form id="auth-form">
+        <div class="form-group">
+          <label for="auth-name">Your Full Name</label>
+          <input type="text" id="auth-name" class="form-control" placeholder="e.g. Sarah Namubiru" required>
+        </div>
+
+        <div class="form-group">
+          <label for="auth-email">Email or Phone Number</label>
+          <input type="text" id="auth-email" class="form-control" placeholder="e.g. sarah@example.com or 0700 000000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="auth-goal">Primary Learning Goal</label>
+          <select id="auth-goal" class="form-control">
+            <option value="General Computer Basics">Master General Computer Basics</option>
+            <option value="Office & Document Work">Office &amp; Data Entry Work</option>
+            <option value="Web & Coding">Beginner Web Coding &amp; HTML</option>
+            <option value="Local Center Enrollment">Enroll in Makindye Training Center</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 10px;">Save &amp; Activate My Hub</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== MODAL DIALOG: PRINTABLE CERTIFICATE ===== -->
+  <div class="modal-backdrop" id="cert-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog" style="max-width: 740px; padding: 24px;">
+      <button type="button" class="modal-close" id="close-cert-btn" aria-label="Close modal">✕</button>
+      
+      <div class="certificate-paper" id="printable-certificate">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px;">
+          <img src="images/logo-light.svg" alt="Logo" class="logo-icon" data-theme-logo="true" style="width: 36px; height: 36px;">
+          <span style="font-weight: 700; color: #0f2b46; font-size: 1.15rem; letter-spacing: 0.5px;">KABALAGALA DIGITAL PATHWAYS</span>
+        </div>
+        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; color: #64748b; margin-bottom: 4px;">Faculty of Science &amp; Technology &middot; Victoria University Kampala</p>
+        
+        <h2>Certificate of Foundational Digital Literacy</h2>
+        <p style="font-size: 0.95rem; color: #475569; margin-bottom: 6px;">This certifies that</p>
+        
+        <div class="cert-student-name" id="cert-display-name">Student Learner</div>
+        
+        <p style="max-width: 520px; margin: 12px auto; font-size: 0.92rem; color: #334155; line-height: 1.5;">has satisfactorily mastered all 14 foundational digital milestones covering Computer Basics, File Management, Secure Internet Research, Word Processing, and Beginner Web Code (HTML).</p>
+        
+        <div class="cert-footer-sig">
+          <div>
+            <strong>Issuing Initiative:</strong><br>
+            Kabalagala Digital Pathways (Group 16)
+          </div>
+          <div>
+            <strong>Platform Developer:</strong><br>
+            Wanyana Christin
+          </div>
+          <div>
+            <strong>Academic Year:</strong><br>
+            2026 Edition &middot; Kabalagala, Uganda
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;" class="no-print">
+        <button type="button" class="btn btn-outline-dark btn-sm" id="close-cert-btn-2">Close</button>
+        <button type="button" class="btn btn-accent btn-sm" id="print-cert-btn">Print / Save as PDF 🖨️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4 style="color: #ffffff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+          <img src="images/logo-light.svg" alt="Logo" class="logo-icon" data-theme-logo="true" style="width: 28px; height: 28px; border-radius: 4px;">
+          Kabalagala Digital Pathways
+        </h4>
+        <p>Connecting young people in Makindye Division, Kabalagala &amp; Greater Kampala, with verified digital training opportunities, self-paced skills, and career resources.</p>
+        <p style="margin-top: 8px; font-size: 0.88rem; color: #cbd5e1;">Developed by: <strong style="color: #fde68a;">Wanyana Christin</strong></p>
+      </div>
+
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#quiz">Career Quiz</a></li>
+          <li><a href="#dashboard">My Learning Hub</a></li>
+          <li><a href="#learn">Skills Checklist</a></li>
+          <li><a href="#videos">Video Library</a></li>
+          <li><a href="#opportunities">Opportunities</a></li>
+          <li><a href="#careers">ICT Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Governance &amp; Trust</h5>
+        <ul>
+          <li><a href="#about">About Victoria University</a></li>
+          <li><a href="#safety">Online Safety Guide</a></li>
+          <li><a href="mailto:info@kabalagaladigitalpathways.ac.ug">info@kabalagaladigitalpathways.ac.ug</a></li>
+          <li><a href="https://wa.me/256700123456" target="_blank" rel="noopener">WhatsApp Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>Kabalagala Digital Pathways &middot; Victoria University Kampala</div>
+      <div>Website Developer: <strong style="color: #fde68a;">Wanyana Christin</strong> &middot; 2026 Edition</div>
+    </div>
+  </footer>
+
+  <!-- ===== SPA CONTROLLER JAVASCRIPT ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Keys for LocalStorage
+      const KEYS = {
+        PROGRESS: 'kdp_learning_progress',
+        USER: 'kdp_user_session',
+        BOOKMARKS: 'kdp_saved_opportunities',
+        THEME: 'kdp_theme'
+      };
+
+      // 1. Theme Toggle (Dark / Light Mode)
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+
+      function setTheme(theme) {
+        const isDark = (theme === 'dark');
+        if (isDark) {
+          htmlEl.setAttribute('data-theme', 'dark');
+          if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
+        } else {
+          htmlEl.setAttribute('data-theme', 'light');
+          if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
+        }
+
+        // Dynamically update all logos to correspond to the active theme
+        const logoSrc = isDark ? 'images/logo-dark.svg' : 'images/logo-light.svg';
+        document.querySelectorAll('img.logo-icon, [data-theme-logo="true"]').forEach(function (img) {
+          img.src = logoSrc;
+        });
+
+        // Update favicon dynamically
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+          favicon.href = logoSrc;
+        }
+
+        try {
+          localStorage.setItem(KEYS.THEME, theme);
+        } catch (e) {}
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem(KEYS.THEME) || 'light';
+      setTheme(savedTheme);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+          const current = htmlEl.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+
+      // 2. Mobile Menu Toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function () {
+          navMenu.classList.toggle('show');
+        });
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', () => navMenu.classList.remove('show'));
+        });
+      }
+
+      // 3. Active Scroll-Spy with IntersectionObserver
+      const sections = document.querySelectorAll('.spa-section');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => observer.observe(sec));
+
+      // 4. User Authentication / Session Modal
+      const authModal = document.getElementById('auth-modal');
+      const openAuthBtn = document.getElementById('open-auth-btn');
+      const closeAuthBtn = document.getElementById('close-modal-btn');
+      const authForm = document.getElementById('auth-form');
+      const userBadge = document.getElementById('user-profile-badge');
+      const userInitials = document.getElementById('user-avatar-initials');
+      const userDisplayName = document.getElementById('user-display-name');
+      const logoutBtn = document.getElementById('logout-btn');
+      const dashGreeting = document.getElementById('dash-greeting');
+      const dashSubtext = document.getElementById('dash-subtext');
+      const dashActionBtn = document.getElementById('dash-action-btn');
+      const certDisplayName = document.getElementById('cert-display-name');
+
+      function openModal(customHint) {
+        const authModalHint = document.getElementById('auth-modal-hint');
+        if (authModalHint && !customHint) {
+          authModalHint.textContent = 'Save your learning checklist progress and bookmarked opportunities to your browser profile.';
+          authModalHint.style.color = 'var(--text-muted)';
+        }
+        authModal.classList.add('active');
+        authModal.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeModal() {
+        authModal.classList.remove('active');
+        authModal.setAttribute('aria-hidden', 'true');
+      }
+
+      if (openAuthBtn) openAuthBtn.addEventListener('click', () => openModal(false));
+      if (dashActionBtn) dashActionBtn.addEventListener('click', () => openModal(false));
+      if (closeAuthBtn) closeAuthBtn.addEventListener('click', closeModal);
+      if (authModal) {
+        authModal.addEventListener('click', function (e) {
+          if (e.target === authModal) closeModal();
+        });
+      }
+
+      // Handle user registration / login form
+      if (authForm) {
+        authForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('auth-name').value.trim();
+          const email = document.getElementById('auth-email').value.trim();
+          const goal = document.getElementById('auth-goal').value;
+
+          if (name) {
+            const user = { name, email, goal, loggedInAt: new Date().toISOString() };
+            localStorage.setItem(KEYS.USER, JSON.stringify(user));
+            updateUserUI(user);
+            closeModal();
+          }
+        });
+      }
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function () {
+          localStorage.removeItem(KEYS.USER);
+          updateUserUI(null);
+        });
+      }
+
+      let currentUser = null;
+      let savedProgress = {};
+
+      const checkboxes = document.querySelectorAll('.task-checkbox');
+      const progressBar = document.getElementById('progress-bar');
+      const progressPercent = document.getElementById('progress-percent');
+      const progressCount = document.getElementById('progress-count');
+      const resetBtn = document.getElementById('reset-progress');
+      const dashTasksMetric = document.getElementById('dash-tasks-metric');
+      const dashPercentMetric = document.getElementById('dash-percent-metric');
+      const certBanner = document.getElementById('cert-unlock-banner');
+      const progressAuthBadge = document.getElementById('progress-auth-badge');
+      const progressAuthBtn = document.getElementById('progress-auth-btn');
+
+      if (progressAuthBtn) {
+        progressAuthBtn.addEventListener('click', () => openModal(false));
+      }
+
+      function updateUserUI(user) {
+        currentUser = user;
+        if (user && user.name) {
+          if (openAuthBtn) openAuthBtn.style.display = 'none';
+          if (dashActionBtn) dashActionBtn.style.display = 'none';
+          if (userBadge) userBadge.style.display = 'flex';
+          const firstLetter = user.name.charAt(0).toUpperCase();
+          if (userInitials) userInitials.textContent = firstLetter;
+          if (userDisplayName) userDisplayName.textContent = user.name.split(' ')[0];
+          if (dashGreeting) dashGreeting.textContent = `Welcome back, ${user.name}!`;
+          if (dashSubtext) dashSubtext.textContent = `Track: ${user.goal || 'Digital Skills Foundation'}`;
+          if (certDisplayName) certDisplayName.textContent = user.name;
+          if (progressAuthBadge) {
+            progressAuthBadge.innerHTML = `<span style="color: #15803d; font-weight: 600;">✓ Progress saved to ${user.name}'s account</span>`;
+          }
+          // Restore saved progress
+          try {
+            savedProgress = JSON.parse(localStorage.getItem(KEYS.PROGRESS) || '{}');
+          } catch (e) {
+            savedProgress = {};
+          }
+          checkboxes.forEach(cb => {
+            const taskId = cb.getAttribute('data-task-id');
+            cb.checked = !!savedProgress[taskId];
+          });
+          updateProgressDisplay();
+        } else {
+          if (openAuthBtn) openAuthBtn.style.display = 'inline-flex';
+          if (dashActionBtn) {
+            dashActionBtn.style.display = 'inline-flex';
+            dashActionBtn.textContent = 'Sign In to Save Progress';
+          }
+          if (userBadge) userBadge.style.display = 'none';
+          if (dashGreeting) dashGreeting.textContent = 'Welcome to Your Study Dashboard!';
+          if (dashSubtext) dashSubtext.textContent = 'Track your digital literacy milestones and saved community opportunities.';
+          if (certDisplayName) certDisplayName.textContent = 'Student Learner';
+          if (progressAuthBadge) {
+            progressAuthBadge.innerHTML = `
+              <span>🔒 Account required to save your progress.</span>
+              <button type="button" class="btn btn-outline-dark btn-sm" id="progress-auth-btn-dyn" style="padding: 2px 8px; font-size: 0.78rem;">Create Free Account</button>
+            `;
+            const dynBtn = document.getElementById('progress-auth-btn-dyn');
+            if (dynBtn) dynBtn.addEventListener('click', () => openModal(false));
+          }
+          savedProgress = {};
+          checkboxes.forEach(cb => { cb.checked = false; });
+          updateProgressDisplay();
+        }
+      }
+
+      // 5. Checklist Progress Tracking & Sync with Dashboard & Certificate
+      checkboxes.forEach(function (cb) {
+        const taskId = cb.getAttribute('data-task-id');
+
+        cb.addEventListener('click', function (e) {
+          if (!currentUser || !currentUser.name) {
+            e.preventDefault();
+            cb.checked = false;
+            openModal(true);
+            const authModalHint = document.getElementById('auth-modal-hint');
+            if (authModalHint) {
+              authModalHint.innerHTML = '<span style="color: #d97706; font-weight: 700;">🔒 Please create your student account first to track and save your learning progress!</span>';
+            }
+            return;
+          }
+        });
+
+        cb.addEventListener('change', function () {
+          if (!currentUser || !currentUser.name) {
+            cb.checked = false;
+            return;
+          }
+          savedProgress[taskId] = cb.checked;
+          try {
+            localStorage.setItem(KEYS.PROGRESS, JSON.stringify(savedProgress));
+          } catch (e) {}
+          updateProgressDisplay();
+        });
+      });
+
+      function updateProgressDisplay() {
+        const total = checkboxes.length;
+        let completed = 0;
+        checkboxes.forEach(cb => { if (cb.checked) completed++; });
+        const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+        if (progressBar) progressBar.style.width = percent + '%';
+        if (progressPercent) progressPercent.textContent = percent + '%';
+        if (progressCount) progressCount.textContent = `${completed} of ${total} tasks completed`;
+        if (dashTasksMetric) dashTasksMetric.textContent = `${completed} / ${total}`;
+        if (dashPercentMetric) dashPercentMetric.textContent = `${percent}%`;
+
+        // Unlock Certificate if 100% completed
+        if (certBanner) {
+          if (percent === 100 && currentUser && currentUser.name) {
+            certBanner.style.display = 'flex';
+          } else {
+            certBanner.style.display = 'none';
+          }
+        }
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          if (!currentUser || !currentUser.name) {
+            openModal(true);
+            const authModalHint = document.getElementById('auth-modal-hint');
+            if (authModalHint) {
+              authModalHint.innerHTML = '<span style="color: #d97706; font-weight: 700;">🔒 Please create your student account first to manage learning progress!</span>';
+            }
+            return;
+          }
+          if (confirm('Do you want to reset your saved checklist progress?')) {
+            savedProgress = {};
+            try {
+              localStorage.removeItem(KEYS.PROGRESS);
+            } catch (e) {}
+            checkboxes.forEach(cb => { cb.checked = false; });
+            updateProgressDisplay();
+          }
+        });
+      }
+
+      try {
+        currentUser = JSON.parse(localStorage.getItem(KEYS.USER));
+      } catch (e) {
+        currentUser = null;
+      }
+      updateUserUI(currentUser);
+
+      updateProgressDisplay();
+
+      // 6. Certificate Modal & Printing
+      const certModal = document.getElementById('cert-modal');
+      const openCertBtn = document.getElementById('open-cert-btn');
+      const closeCertBtn = document.getElementById('close-cert-btn');
+      const closeCertBtn2 = document.getElementById('close-cert-btn-2');
+      const printCertBtn = document.getElementById('print-cert-btn');
+
+      function openCertModal() {
+        if (!currentUser || !currentUser.name) {
+          const enterName = prompt('Please enter your full name for the certificate:', 'Sarah Namubiru');
+          if (enterName && enterName.trim()) {
+            currentUser = { name: enterName.trim(), email: '', goal: '' };
+            localStorage.setItem(KEYS.USER, JSON.stringify(currentUser));
+            updateUserUI(currentUser);
+          }
+        }
+        certModal.classList.add('active');
+        certModal.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeCertModal() {
+        certModal.classList.remove('active');
+        certModal.setAttribute('aria-hidden', 'true');
+      }
+
+      if (openCertBtn) openCertBtn.addEventListener('click', openCertModal);
+      if (closeCertBtn) closeCertBtn.addEventListener('click', closeCertModal);
+      if (closeCertBtn2) closeCertBtn2.addEventListener('click', closeCertModal);
+      if (printCertBtn) {
+        printCertBtn.addEventListener('click', function () {
+          window.print();
+        });
+      }
+      if (certModal) {
+        certModal.addEventListener('click', function (e) {
+          if (e.target === certModal) closeCertModal();
+        });
+      }
+
+      // 7. Live HTML Sandbox
+      const sandboxCode = document.getElementById('sandbox-code');
+      const sandboxPreview = document.getElementById('sandbox-preview');
+      const runSandboxBtn = document.getElementById('run-sandbox-btn');
+      const resetSandboxBtn = document.getElementById('reset-sandbox-btn');
+
+      const initialCode = sandboxCode ? sandboxCode.value : '';
+
+      function renderSandbox() {
+        if (sandboxCode && sandboxPreview) {
+          sandboxPreview.srcdoc = sandboxCode.value;
+        }
+      }
+
+      if (sandboxCode) {
+        sandboxCode.addEventListener('input', renderSandbox);
+      }
+      if (runSandboxBtn) {
+        runSandboxBtn.addEventListener('click', renderSandbox);
+      }
+      if (resetSandboxBtn) {
+        resetSandboxBtn.addEventListener('click', function () {
+          if (sandboxCode) {
+            sandboxCode.value = initialCode;
+            renderSandbox();
+          }
+        });
+      }
+      renderSandbox();
+
+      // 8. Career Matcher Quiz Logic
+      const quizSteps = document.querySelectorAll('.quiz-step');
+      const quizResult = document.getElementById('quiz-result');
+      const quizResTitle = document.getElementById('quiz-res-title');
+      const quizResDesc = document.getElementById('quiz-res-desc');
+      const quizRetakeBtn = document.getElementById('quiz-retake-btn');
+
+      const quizAnswers = { step1: '', step2: '', step3: '' };
+
+      quizSteps.forEach(step => {
+        const stepNum = step.getAttribute('data-step');
+        const cards = step.querySelectorAll('.quiz-option-card');
+        const nextBtn = step.querySelector('.quiz-next-btn') || step.querySelector('.quiz-finish-btn');
+        const prevBtn = step.querySelector('.quiz-prev-btn');
+
+        cards.forEach(card => {
+          card.addEventListener('click', function () {
+            cards.forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            quizAnswers['step' + stepNum] = this.getAttribute('data-val');
+            if (nextBtn) nextBtn.removeAttribute('disabled');
+          });
+        });
+
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            if (stepNum === '3') {
+              showQuizResults();
+            } else {
+              step.classList.remove('active');
+              const nextStep = document.querySelector(`.quiz-step[data-step="${parseInt(stepNum) + 1}"]`);
+              if (nextStep) nextStep.classList.add('active');
+            }
+          });
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            step.classList.remove('active');
+            const prevStep = document.querySelector(`.quiz-step[data-step="${parseInt(stepNum) - 1}"]`);
+            if (prevStep) prevStep.classList.add('active');
+          });
+        }
+      });
+
+      function showQuizResults() {
+        quizSteps.forEach(s => s.classList.remove('active'));
+        if (quizResult) quizResult.style.display = 'block';
+
+        const choice = quizAnswers.step1;
+        if (choice === 'web') {
+          quizResTitle.textContent = 'Junior Web & Digital Content Assistant';
+          quizResDesc.textContent = 'You have a natural curiosity for how the internet works and building digital solutions! Start with Module 4 (HTML & Web), practice on our live code playground, and consider joining the free UICT Nakawa Cisco Web Track.';
+        } else if (choice === 'tech') {
+          quizResTitle.textContent = 'IT Support & Computer Operator';
+          quizResDesc.textContent = 'You enjoy practical hands-on problem solving! Master Computer Basics and Operating Systems in Module 1, and consider visiting the MTN Skills Academy at Kabalagala Youth Centre to train on lab PCs.';
+        } else if (choice === 'service') {
+          quizResTitle.textContent = 'Digital Marketing & Online Customer Support';
+          quizResDesc.textContent = 'You excel at communication and interacting with customers! Focus on professional email communication in Module 2, internet safety in Module 5, and leverage free courses on Google Digital Skills for Africa.';
+        } else {
+          quizResTitle.textContent = 'Office Administration & Data Clerk';
+          quizResDesc.textContent = 'You thrive on organization and accuracy! Focus on Module 1 (File Organization) and Module 3 (Word & Document Formatting). This is one of the fastest entry routes into office employment across Kabalagala and Greater Kampala.';
+        }
+      }
+
+      if (quizRetakeBtn) {
+        quizRetakeBtn.addEventListener('click', function () {
+          quizResult.style.display = 'none';
+          document.querySelectorAll('.quiz-option-card').forEach(c => c.classList.remove('selected'));
+          document.querySelectorAll('.quiz-next-btn, .quiz-finish-btn').forEach(b => b.setAttribute('disabled', 'true'));
+          quizSteps.forEach(s => s.classList.remove('active'));
+          const first = document.querySelector('.quiz-step[data-step="1"]');
+          if (first) first.classList.add('active');
+        });
+      }
+
+      // 9. Opportunity Card Bookmarks
+      const bookmarkBtns = document.querySelectorAll('.btn-icon-save');
+      const savedItemsList = document.getElementById('saved-items-list');
+      const savedEmptyMessage = document.getElementById('saved-empty-message');
+      const dashSavedMetric = document.getElementById('dash-saved-metric');
+
+      let savedBookmarks = {};
+      try {
+        savedBookmarks = JSON.parse(localStorage.getItem(KEYS.BOOKMARKS) || '{}');
+      } catch (e) {
+        savedBookmarks = {};
+      }
+
+      function updateBookmarksUI() {
+        const ids = Object.keys(savedBookmarks);
+        if (dashSavedMetric) dashSavedMetric.textContent = ids.length;
+
+        bookmarkBtns.forEach(btn => {
+          const id = btn.getAttribute('data-opp-id');
+          if (savedBookmarks[id]) {
+            btn.classList.add('saved');
+            btn.textContent = '★ Bookmarked';
+          } else {
+            btn.classList.remove('saved');
+            btn.textContent = '★ Bookmark';
+          }
+        });
+
+        if (savedItemsList && savedEmptyMessage) {
+          savedItemsList.innerHTML = '';
+          if (ids.length === 0) {
+            savedEmptyMessage.style.display = 'block';
+          } else {
+            savedEmptyMessage.style.display = 'none';
+            ids.forEach(id => {
+              const name = savedBookmarks[id];
+              const li = document.createElement('li');
+              li.className = 'saved-item-row';
+              li.innerHTML = `
+                <span><strong>${name}</strong> &middot; Verified Program</span>
+                <button type="button" class="btn-sm btn-outline-dark remove-bookmark" data-id="${id}">Remove</button>
+              `;
+              savedItemsList.appendChild(li);
+            });
+
+            savedItemsList.querySelectorAll('.remove-bookmark').forEach(b => {
+              b.addEventListener('click', function () {
+                const removeId = this.getAttribute('data-id');
+                delete savedBookmarks[removeId];
+                localStorage.setItem(KEYS.BOOKMARKS, JSON.stringify(savedBookmarks));
+                updateBookmarksUI();
+              });
+            });
+          }
+        }
+      }
+
+      bookmarkBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const id = this.getAttribute('data-opp-id');
+          const name = this.getAttribute('data-opp-name');
+          if (savedBookmarks[id]) {
+            delete savedBookmarks[id];
+          } else {
+            savedBookmarks[id] = name;
+          }
+          localStorage.setItem(KEYS.BOOKMARKS, JSON.stringify(savedBookmarks));
+          updateBookmarksUI();
+        });
+      });
+
+      updateBookmarksUI();
+
+      // 10. Category Filter Tabs & Instant Search
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const oppCards = document.querySelectorAll('.opp-card');
+      const oppSearchInput = document.getElementById('opp-search-input');
+      const clearSearchBtn = document.getElementById('clear-opp-search');
+      const oppNoResults = document.getElementById('opp-no-results');
+
+      let currentCategory = 'all';
+      let searchQuery = '';
+
+      function filterOpportunities() {
+        let visibleCount = 0;
+        oppCards.forEach(card => {
+          const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+          const cardText = card.textContent.toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all') || tags.includes(currentCategory);
+          const matchesSearch = !searchQuery || cardText.includes(searchQuery);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (oppNoResults) {
+          oppNoResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          currentCategory = this.getAttribute('data-filter') || 'all';
+          filterOpportunities();
+        });
+      });
+
+      if (oppSearchInput) {
+        oppSearchInput.addEventListener('input', function () {
+          searchQuery = this.value.trim().toLowerCase();
+          if (clearSearchBtn) {
+            clearSearchBtn.style.display = searchQuery ? 'block' : 'none';
+          }
+          filterOpportunities();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', function () {
+          if (oppSearchInput) {
+            oppSearchInput.value = '';
+            searchQuery = '';
+            clearSearchBtn.style.display = 'none';
+            filterOpportunities();
+            oppSearchInput.focus();
+          }
+        });
+      }
+
+      // 11. Inquiry Form Handling
+      const inquiryForm = document.getElementById('inquiry-form');
+      const formSuccess = document.getElementById('form-success-msg');
+      if (inquiryForm && formSuccess) {
+        inquiryForm.addEventListener('submit', function () {
+          formSuccess.style.display = 'block';
+        });
+      }
+
+      // 12. Interactive Collapsible FAQ Accordion
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const item = this.parentElement;
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (authModal && authModal.classList.contains('active')) closeModal();
+          if (certModal && certModal.classList.contains('active')) closeCertModal();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

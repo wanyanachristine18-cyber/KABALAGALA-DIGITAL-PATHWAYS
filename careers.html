@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Careers – Kabalagala Digital Pathways</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo-light.svg">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kdp_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-light.svg" alt="Kabalagala Digital Pathways Logo" class="logo-icon" data-theme-logo="true">
+        <span>Kabalagala Digital Pathways</span>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="careers.html" class="active">ICT Careers</a></li>
+        <li><a href="safety.html">Online Safety</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="btn-theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+      🌙
+    </button>
+  </header>
+
+  <main>
+    <h1>Entry-Level ICT Careers</h1>
+    <p>These are realistic starting points for beginners who complete basic digital skills training. Most of these roles can begin with short courses and a small portfolio.</p>
+
+    <h2>Entry-Level Role Cards</h2>
+    <div class="card" style="margin-bottom: 20px;">
+      <img src="images/careers-tech.jpg" alt="Youth collaborating on technology and digital work" class="card-img" style="height: 220px;">
+      <p>Explore beginner pathways that require no expensive degrees to get started in Makindye.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Computer Operator / Data Entry</h3>
+        <p>Typing, filing and entering data accurately. Good starting role for office work.</p>
+      </div>
+      <div class="card">
+        <h3>IT Support Assistant</h3>
+        <p>Helping users with basic computer problems, printers and simple network issues.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Content Assistant</h3>
+        <p>Creating simple social media posts, editing short videos or managing basic websites.</p>
+      </div>
+      <div class="card">
+        <h3>Online Customer Support</h3>
+        <p>Answering customer questions by email, chat or phone for companies that sell online.</p>
+      </div>
+    </div>
+
+    <h2>Skills-to-Role Map</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Skill you learn</th>
+          <th>Useful for these roles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Typing and documents</td>
+          <td>Data entry, office assistant, customer support</td>
+        </tr>
+        <tr>
+          <td>Internet and email</td>
+          <td>All ICT roles, online support, research</td>
+        </tr>
+        <tr>
+          <td>Basic HTML / web</td>
+          <td>Content assistant, junior web helper</td>
+        </tr>
+        <tr>
+          <td>Online safety awareness</td>
+          <td>Any role that uses the internet</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Beginner Portfolio Ideas</h2>
+    <div class="card">
+      <ul>
+        <li>A short “About Me” page you built with HTML</li>
+        <li>A one-page CV saved as PDF</li>
+        <li>Screenshots of practice documents you created</li>
+        <li>A simple poster or social media graphic (even if made in Canva or PowerPoint)</li>
+        <li>A short reflection on what you learned in the three-day starter plan</li>
+      </ul>
+      <p>You do not need many items. Three or four clear examples are enough for a beginner portfolio.</p>
+    </div>
+
+    <h2>CV and Interview Basics</h2>
+    <div class="card">
+      <h3>CV tips</h3>
+      <ul>
+        <li>Keep it to one page if possible</li>
+        <li>Put your name, phone and email at the top</li>
+        <li>List education and any short courses</li>
+        <li>Include skills (typing, MS Word, internet, basic HTML)</li>
+        <li>Add any volunteer or practice projects</li>
+      </ul>
+      <h3>Interview tips</h3>
+      <ul>
+        <li>Arrive on time (or join the call early)</li>
+        <li>Dress neatly</li>
+        <li>Prepare one short story about a problem you solved while learning</li>
+        <li>Ask one thoughtful question at the end</li>
+        <li>Thank the interviewer</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 30px;">
+      <a href="safety.html" class="btn">Next: Online Safety →</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="about.html#sources">Sources</a> |
+      <a href="about.html#privacy">Privacy</a>
+    </p>
+    <p>Kabalagala Digital Pathways &middot; Developed by <strong>Wanyana Christin</strong> &middot; Victoria University Kampala</p>
+  </footer>
+
+  <script>
+    (function () {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+      function setTheme(theme) {
+        const isDark = (theme === 'dark');
+        htmlEl.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        if (themeToggleBtn) themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+        const logoSrc = isDark ? 'images/logo-dark.svg' : 'images/logo-light.svg';
+        document.querySelectorAll('img.logo-icon, [data-theme-logo="true"]').forEach(function (img) {
+          img.src = logoSrc;
+        });
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) favicon.href = logoSrc;
+        try { localStorage.setItem('kdp_theme', theme); } catch (e) {}
+      }
+      const savedTheme = localStorage.getItem('kdp_theme') || 'light';
+      setTheme(savedTheme);
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+          const current = htmlEl.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
